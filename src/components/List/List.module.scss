@@ -1,0 +1,45 @@
+.List {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	border: 2px solid lightgray;
+	border-radius: 20px;
+
+	&__headers {
+		width: 100%;
+		height: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__titles {
+		flex: 1;
+		border-right: 1px solid lightgray;
+
+		&:last-child {
+			border: none;
+		}
+	}
+
+	&__body {
+		display: flex;
+	}
+
+	&__col {
+		flex: 1;
+		height: 1000px;
+	}
+
+	&__hours {
+		height: 90px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.List__col--rel {
+	position: relative;
+}
