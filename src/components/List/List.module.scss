@@ -5,6 +5,7 @@
 	margin: 20px auto;
 	border: 2px solid lightgray;
 	border-radius: 20px;
+	background-color: #edf6f9;
 
 	&__headers {
 		width: 100%;
@@ -28,11 +29,12 @@
 	}
 
 	&__col {
-		flex: 1;
 		height: 1000px;
+		flex: 1;
 	}
 
 	&__hours {
+		box-sizing: border-box;
 		height: 90px;
 		display: flex;
 		flex-direction: column;

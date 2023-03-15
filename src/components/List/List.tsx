@@ -1,10 +1,19 @@
 import classnames from 'classnames';
+import IEvent from '../../types/IEvent';
 import Card from '../Card/Card';
 import style from './List.module.scss';
 import useList from './useList';
 
-export default function List() {
+interface IListProps {
+	events: IEvent[];
+}
+
+export default function List(props: IListProps) {
 	const { roomOne, roomTwo, calculateDistanceFromTop, calculateDivHeight, getCardColor } = useList();
+
+	props.events.forEach((event) => {
+		event.room === 1 ? roomOne.push(event) : roomTwo.push(event);
+	});
 
 	const officeHours: string[] = ['8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
 	const rooms: number[] = [1, 2, 3];
