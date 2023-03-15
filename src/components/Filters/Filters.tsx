@@ -23,13 +23,13 @@ export default function Filters(props: IFilterProps) {
 		setFilterValues({ ...filterValues, vocal: e.target.value });
 	}
 
-	useEffect(() => {
-		props.onFiltersChange(filterValues);
-	}, [filterValues]);
-
 	function handleThemeChange(e: ChangeEvent<HTMLSelectElement>) {
 		setFilterValues({ ...filterValues, theme: e.target.value });
 	}
+
+	useEffect(() => {
+		props.onFiltersChange(filterValues);
+	}, [filterValues]);
 
 	function clearFilters() {
 		setFilterValues(initialFiltersState);
@@ -41,7 +41,13 @@ export default function Filters(props: IFilterProps) {
 				<label htmlFor="vocal" className={style.Filters__label}>
 					Ponente
 				</label>
-				<select name="vocal" id="vocal-select" onChange={(e) => handleVocalChange(e)} className={style.Filters__select}>
+				<select
+					name="vocal"
+					id="vocal-select"
+					onChange={(e) => handleVocalChange(e)}
+					className={style.Filters__select}
+					data-testid="vocal-select"
+				>
 					<option value="">Selecciona ponente</option>
 					{props.vocals.map((vocal, i) => {
 						return (
@@ -56,7 +62,13 @@ export default function Filters(props: IFilterProps) {
 				<label htmlFor="theme" className={style.Filters__label}>
 					Temática
 				</label>
-				<select name="theme" id="theme-select" onChange={(e) => handleThemeChange(e)} className={style.Filters__select}>
+				<select
+					name="theme"
+					id="theme-select"
+					onChange={(e) => handleThemeChange(e)}
+					className={style.Filters__select}
+					data-testid="theme-select"
+				>
 					<option value="">Selecciona Temática</option>
 
 					<option value="General">General</option>
@@ -66,7 +78,7 @@ export default function Filters(props: IFilterProps) {
 				</select>
 			</div>
 
-			<button onClick={clearFilters} className={style.Filters__button}>
+			<button onClick={clearFilters} className={style.Filters__button} data-testid="clear-filters-btn">
 				Borrar filtros
 			</button>
 		</div>
