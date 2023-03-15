@@ -1,0 +1,32 @@
+.Filters {
+	width: 80%;
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__label {
+		border: none;
+		color: gray;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: normal;
+	}
+
+	&__select {
+		margin: 0;
+		padding: 10px 20px;
+		border-radius: 10px;
+		border: none;
+	}
+
+	&__button {
+		background-color: #00bfff;
+		color: white;
+		border-radius: 10px;
+		border: none;
+		padding: 10px 20px;
+		margin: 10px 0;
+		cursor: pointer;
+	}
+}
