@@ -4,8 +4,9 @@ import Card from '../Card/Card';
 import style from './List.module.scss';
 import useList from './useList';
 
-interface IListProps {
+export interface IListProps {
 	events: IEvent[];
+	rooms: number[];
 }
 
 export default function List(props: IListProps) {
@@ -16,19 +17,17 @@ export default function List(props: IListProps) {
 	});
 
 	const officeHours: string[] = ['8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
-	const rooms: number[] = [1, 2, 3];
 	let fromTop: string;
 
 	return (
 		<div className={style.List} data-testid="events-list">
 			<div className={style.List__headers} data-testid="events-list-headers">
 				<div className={style.List__titles}></div>
-				<div className={style.List__titles} style={{}}>
-					Sala 1
-				</div>
-				<div className={style.List__titles} style={{}}>
-					Sala 2
-				</div>
+				{props.rooms.map((room, i) => (
+					<div className={style.List__titles} key={`room-${i}`}>
+						<h3>Room {room}</h3>
+					</div>
+				))}
 			</div>
 
 			<div className={style.List__body} data-testid="events-list-body">

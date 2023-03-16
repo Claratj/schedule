@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react';
 import Filters from './Filters';
 
-describe('Filters', () => {
+describe('<Filters />', () => {
 	it('should render filters correctly', () => {
 		const props = {
 			onFiltersChange: jest.fn(),

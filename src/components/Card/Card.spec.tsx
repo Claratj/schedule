@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Card, { ICardProps } from './Card';
 
-describe('Card component', () => {
+describe('<Card/>', () => {
 	it('should render with the correct props and the correct classes', () => {
 		const props: ICardProps = {
 			id: 1,
