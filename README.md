@@ -47,8 +47,4 @@ It would be great in the future to implement (not necessarily in this order):
 
 - Add more test
 
-## Usage
 
-```bash
-$ npm run shop-online
-```
