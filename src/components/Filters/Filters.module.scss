@@ -1,13 +1,21 @@
 .Filters {
 	width: 80%;
-	margin: 20px auto;
+	padding: 20px;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
+	&__inputs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+
 	&__label {
+		margin-right: 8px;
 		border: none;
-		color: gray;
+		color: #1e1e1e;
 		font-size: 14px;
 		font-style: normal;
 		font-weight: normal;
@@ -15,16 +23,17 @@
 
 	&__select {
 		margin: 0;
-		padding: 10px 20px;
+		padding: 8px 4px;
 		border-radius: 10px;
-		border: none;
+		border: 1px solid #e5eaeb;
 	}
 
 	&__button {
-		background-color: #00bfff;
+		// background-color: #77dbfc;
+		background-color: rgba(#31a6cd, 0.9);
 		color: white;
-		border-radius: 10px;
-		border: none;
+		border-radius: 8px;
+		border: 1px solid #31a6cd;
 		padding: 10px 20px;
 		margin: 10px 0;
 		cursor: pointer;
