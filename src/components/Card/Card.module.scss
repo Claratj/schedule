@@ -1,0 +1,81 @@
+.Card {
+	width: 100%;
+	padding: 6px 20px;
+	box-sizing: border-box;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	border-radius: 8px;
+	border: 1px solid;
+
+	&--blue {
+		background-color: rgba(#47e2eb, 0.3);
+		border-color: #47e2eb;
+	}
+
+	&--yellow {
+		background-color: rgba(#f5efcc, 0.5);
+		border-color: #f5efcc;
+	}
+
+	&--purple {
+		background-color: rgba(#97a5e3, 0.3);
+		border-color: #97a5e3;
+	}
+
+	&--orange {
+		background-color: rgba(#eba084, 0.3);
+		border-color: #eba084;
+	}
+
+	&__title {
+		margin: 0;
+		margin-top: 8px;
+		font-size: 16px;
+	}
+
+	&__info {
+		width: 100%;
+		margin-bottom: 6px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__vocal {
+		margin: 0;
+		font-style: italic;
+		font-size: small;
+	}
+
+	&__tag {
+		padding: 6px 8px;
+		background-color: #e2e2e2;
+		border-radius: 10px;
+		font-size: 12px;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+
+		&--blue {
+			background-color: #16c1ca;
+			color: #0a585c;
+		}
+		&--yellow {
+			background-color: #eee4aa;
+			color: #776918;
+		}
+		&--purple {
+			background-color: #7e8fdd;
+			color: #223481;
+		}
+
+		&--orange {
+			background-color: #e58461;
+			color: #af441d;
+		}
+	}
+}
