@@ -32,7 +32,7 @@ export default function useList() {
 	}
 
 	function calculateDivHeight(fromTime: string, toTime: string) {
-		return (Number(toTime) - Number(fromTime)) * 100;
+		return (Number(toTime) - Number(fromTime)) * 80;
 	}
 
 	function getCardColor(theme: string) {

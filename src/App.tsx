@@ -12,6 +12,8 @@ function App() {
 		setFilters({ ...filters });
 	}
 
+	const rooms: number[] = [1, 2];
+
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -19,7 +21,7 @@ function App() {
 			</header>
 			<main>
 				<Filters onFiltersChange={onFiltersChanged} vocals={vocals} />
-				<List events={events} />
+				<List events={events} rooms={rooms} />
 			</main>
 		</div>
 	);

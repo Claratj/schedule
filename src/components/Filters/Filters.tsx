@@ -36,46 +36,48 @@ export default function Filters(props: IFilterProps) {
 	}
 
 	return (
-		<div className={style.Filters}>
-			<div>
-				<label htmlFor="vocal" className={style.Filters__label}>
-					Ponente
-				</label>
-				<select
-					name="vocal"
-					id="vocal-select"
-					onChange={(e) => handleVocalChange(e)}
-					className={style.Filters__select}
-					data-testid="vocal-select"
-				>
-					<option value="">Selecciona ponente</option>
-					{props.vocals.map((vocal, i) => {
-						return (
-							<option key={`vocal-key-${i}`} value={vocal}>
-								{vocal}
-							</option>
-						);
-					})}
-				</select>
-			</div>
-			<div>
-				<label htmlFor="theme" className={style.Filters__label}>
-					Temática
-				</label>
-				<select
-					name="theme"
-					id="theme-select"
-					onChange={(e) => handleThemeChange(e)}
-					className={style.Filters__select}
-					data-testid="theme-select"
-				>
-					<option value="">Selecciona Temática</option>
+		<div className={style.Filters} data-testid="filters">
+			<div className={style.Filters__inputs}>
+				<div>
+					<label htmlFor="vocal" className={style.Filters__label}>
+						Ponente
+					</label>
+					<select
+						name="vocal"
+						id="vocal-select"
+						onChange={(e) => handleVocalChange(e)}
+						className={style.Filters__select}
+						data-testid="vocal-select"
+					>
+						<option value="">Selecciona ponente</option>
+						{props.vocals.map((vocal, i) => {
+							return (
+								<option key={`vocal-key-${i}`} value={vocal}>
+									{vocal}
+								</option>
+							);
+						})}
+					</select>
+				</div>
+				<div>
+					<label htmlFor="theme" className={style.Filters__label}>
+						Temática
+					</label>
+					<select
+						name="theme"
+						id="theme-select"
+						onChange={(e) => handleThemeChange(e)}
+						className={style.Filters__select}
+						data-testid="theme-select"
+					>
+						<option value="">Selecciona Temática</option>
 
-					<option value="General">General</option>
-					<option value="Backend">Backend</option>
-					<option value="Frontend">Frontend</option>
-					<option value="DevOps">DevOps</option>
-				</select>
+						<option value="General">General</option>
+						<option value="Backend">Backend</option>
+						<option value="Frontend">Frontend</option>
+						<option value="DevOps">DevOps</option>
+					</select>
+				</div>
 			</div>
 
 			<button onClick={clearFilters} className={style.Filters__button} data-testid="clear-filters-btn">

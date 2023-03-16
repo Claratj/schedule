@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import List, { IListProps } from './List';
 import useList from './useList';
 
@@ -39,6 +39,7 @@ describe('<List/>', () => {
 					room: 2,
 				},
 			],
+			rooms: [1, 2],
 		};
 
 		const { getByTestId } = render(<List {...props} />);
@@ -50,5 +51,8 @@ describe('<List/>', () => {
 		expect(list).toBeInTheDocument();
 		expect(listHeaders).toBeInTheDocument();
 		expect(listBody).toBeInTheDocument();
+		expect(screen.getByText(/Room 1/)).toBeVisible();
+		expect(screen.getByText(/Room 2/)).toBeVisible();
+		expect(screen.getByText('8')).toBeVisible();
 	});
 });
