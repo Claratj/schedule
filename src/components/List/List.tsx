@@ -20,8 +20,8 @@ export default function List(props: IListProps) {
 	let fromTop: string;
 
 	return (
-		<div className={style.List}>
-			<div className={style.List__headers}>
+		<div className={style.List} data-testid="events-list">
+			<div className={style.List__headers} data-testid="events-list-headers">
 				<div className={style.List__titles}></div>
 				<div className={style.List__titles} style={{}}>
 					Sala 1
@@ -31,7 +31,7 @@ export default function List(props: IListProps) {
 				</div>
 			</div>
 
-			<div className={style.List__body}>
+			<div className={style.List__body} data-testid="events-list-body">
 				<div className={style.List__col}>
 					{officeHours.map((hour, i) => (
 						<div key={i} className={style.List__hours}>
