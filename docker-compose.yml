@@ -1,0 +1,12 @@
+version: ''
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/schedule
+    ports:
+      - 3000:3000
+    image: app:react
+    container_name: react_container
+    command: npm start
