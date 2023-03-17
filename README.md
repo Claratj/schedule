@@ -28,7 +28,7 @@ This project responds to a technical test of a few hours duration where two task
 - The existence of tests to ensure the correct functioning of the code. ✔️
 
 - **Extra:**
-  - Have the application running in a Docker container.
+  - Have the application running in a Docker container. ✔️
   - Have the application [deployed](https://events-schedule-fdewfe4z1-claratj.vercel.app/) ✔️
 
 ## Backlog
