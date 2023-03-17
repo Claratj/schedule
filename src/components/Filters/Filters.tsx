@@ -1,5 +1,6 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import style from './Filters.module.scss';
+import useFilters from './useFilters';
 
 export interface IFilter {
 	vocal?: string;
@@ -13,27 +14,11 @@ interface IFilterProps extends IFilter {
 }
 
 export default function Filters(props: IFilterProps) {
-	const initialFiltersState = {
-		vocal: '',
-		theme: '',
-	};
-	const [filterValues, setFilterValues] = useState(initialFiltersState);
-
-	function handleVocalChange(e: ChangeEvent<HTMLSelectElement>) {
-		setFilterValues({ ...filterValues, vocal: e.target.value });
-	}
-
-	function handleThemeChange(e: ChangeEvent<HTMLSelectElement>) {
-		setFilterValues({ ...filterValues, theme: e.target.value });
-	}
+	const { filterValues, vocalRef, themeRef, handleThemeChange, handleVocalChange, clearFilters } = useFilters();
 
 	useEffect(() => {
 		props.onFiltersChange(filterValues);
 	}, [filterValues]);
-
-	function clearFilters() {
-		setFilterValues(initialFiltersState);
-	}
 
 	return (
 		<div className={style.Filters} data-testid="filters">
@@ -48,6 +33,7 @@ export default function Filters(props: IFilterProps) {
 						onChange={(e) => handleVocalChange(e)}
 						className={style.Filters__select}
 						data-testid="vocal-select"
+						ref={vocalRef}
 					>
 						<option value="">Selecciona ponente</option>
 						{props.vocals.map((vocal, i) => {
@@ -69,6 +55,7 @@ export default function Filters(props: IFilterProps) {
 						onChange={(e) => handleThemeChange(e)}
 						className={style.Filters__select}
 						data-testid="theme-select"
+						ref={themeRef}
 					>
 						<option value="">Selecciona Temática</option>
 
