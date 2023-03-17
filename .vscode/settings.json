@@ -10,5 +10,5 @@
 	"explorer.compactFolders": false,
 	"jest.jestCommandLine": "npm test --",
 	"typescript.tsdk": "node_modules/typescript/lib",
-	"cSpell.words": ["localforage", "smacss", "stylelint"]
+	"cSpell.words": ["localforage", "smacss", "stylelint", "testid"]
 }

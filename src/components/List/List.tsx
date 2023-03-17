@@ -17,7 +17,6 @@ export default function List(props: IListProps) {
 	});
 
 	const officeHours: string[] = ['8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
-	let fromTop: string;
 
 	return (
 		<div className={style.List} data-testid="events-list">

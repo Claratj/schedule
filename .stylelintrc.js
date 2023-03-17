@@ -1,10 +1,5 @@
 module.exports = {
-	extends: [
-		'stylelint-config-standard',
-		'stylelint-config-property-sort-order-smacss',
-		'stylelint-config-css-modules',
-		'stylelint-config-prettier',
-	],
+	extends: ['stylelint-config-standard', 'stylelint-config-property-sort-order-smacss', 'stylelint-config-css-modules'],
 	rules: {
 		'selector-pseudo-element-colon-notation': 'double',
 		'color-hex-length': 'long',
