@@ -29,7 +29,7 @@ This project responds to a technical test of a few hours duration where two task
 
 - **Extra:**
   - Have the application running in a Docker container.
-  - Have the application deployed : https://events-schedule-fdewfe4z1-claratj.vercel.app/. ✔️
+  - Have the application [deployed](https://events-schedule-fdewfe4z1-claratj.vercel.app/) ✔️
 
 ## Backlog
 
@@ -37,13 +37,11 @@ It would be great in the future to implement (not necessarily in this order):
 
 - It would be interesting if the same way that you get the vocals of the events, you could get the number of rooms and create automatically the number of columns and rooms needed.
 
-- Responsive design
+- Improve the __responsive design__ having in the case of the list a different design, in such a way that depending on the window detected in js that it is in one width or another, it renders one component or another.
 
 - Improve accessibility
 
 - Animations
-
--
 
 - Add more test
 
