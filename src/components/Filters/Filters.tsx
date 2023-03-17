@@ -25,7 +25,7 @@ export default function Filters(props: IFilterProps) {
 			<div className={style.Filters__inputs}>
 				<div>
 					<label htmlFor="vocal" className={style.Filters__label}>
-						Ponente
+						Speaker
 					</label>
 					<select
 						name="vocal"
@@ -35,7 +35,7 @@ export default function Filters(props: IFilterProps) {
 						data-testid="vocal-select"
 						ref={vocalRef}
 					>
-						<option value="">Selecciona ponente</option>
+						<option value="">Select Speaker</option>
 						{props.vocals.map((vocal, i) => {
 							return (
 								<option key={`vocal-key-${i}`} value={vocal}>
@@ -47,7 +47,7 @@ export default function Filters(props: IFilterProps) {
 				</div>
 				<div>
 					<label htmlFor="theme" className={style.Filters__label}>
-						Temática
+						Theme
 					</label>
 					<select
 						name="theme"
@@ -57,7 +57,7 @@ export default function Filters(props: IFilterProps) {
 						data-testid="theme-select"
 						ref={themeRef}
 					>
-						<option value="">Selecciona Temática</option>
+						<option value="">Select Theme</option>
 
 						<option value="General">General</option>
 						<option value="Backend">Backend</option>
@@ -68,7 +68,7 @@ export default function Filters(props: IFilterProps) {
 			</div>
 
 			<button onClick={clearFilters} className={style.Filters__button} data-testid="clear-filters-btn">
-				Borrar filtros
+				Clear filters
 			</button>
 		</div>
 	);
