@@ -1,5 +1,6 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import style from './Filters.module.scss';
+import useFilters from './useFilters';
 
 export interface IFilter {
 	vocal?: string;
@@ -13,34 +14,18 @@ interface IFilterProps extends IFilter {
 }
 
 export default function Filters(props: IFilterProps) {
-	const initialFiltersState = {
-		vocal: '',
-		theme: '',
-	};
-	const [filterValues, setFilterValues] = useState(initialFiltersState);
-
-	function handleVocalChange(e: ChangeEvent<HTMLSelectElement>) {
-		setFilterValues({ ...filterValues, vocal: e.target.value });
-	}
-
-	function handleThemeChange(e: ChangeEvent<HTMLSelectElement>) {
-		setFilterValues({ ...filterValues, theme: e.target.value });
-	}
+	const { filterValues, vocalRef, themeRef, handleThemeChange, handleVocalChange, clearFilters } = useFilters();
 
 	useEffect(() => {
 		props.onFiltersChange(filterValues);
 	}, [filterValues]);
-
-	function clearFilters() {
-		setFilterValues(initialFiltersState);
-	}
 
 	return (
 		<div className={style.Filters} data-testid="filters">
 			<div className={style.Filters__inputs}>
 				<div>
 					<label htmlFor="vocal" className={style.Filters__label}>
-						Ponente
+						Speaker
 					</label>
 					<select
 						name="vocal"
@@ -48,8 +33,9 @@ export default function Filters(props: IFilterProps) {
 						onChange={(e) => handleVocalChange(e)}
 						className={style.Filters__select}
 						data-testid="vocal-select"
+						ref={vocalRef}
 					>
-						<option value="">Selecciona ponente</option>
+						<option value="">Select Speaker</option>
 						{props.vocals.map((vocal, i) => {
 							return (
 								<option key={`vocal-key-${i}`} value={vocal}>
@@ -61,7 +47,7 @@ export default function Filters(props: IFilterProps) {
 				</div>
 				<div>
 					<label htmlFor="theme" className={style.Filters__label}>
-						Temática
+						Theme
 					</label>
 					<select
 						name="theme"
@@ -69,8 +55,9 @@ export default function Filters(props: IFilterProps) {
 						onChange={(e) => handleThemeChange(e)}
 						className={style.Filters__select}
 						data-testid="theme-select"
+						ref={themeRef}
 					>
-						<option value="">Selecciona Temática</option>
+						<option value="">Select Theme</option>
 
 						<option value="General">General</option>
 						<option value="Backend">Backend</option>
@@ -81,7 +68,7 @@ export default function Filters(props: IFilterProps) {
 			</div>
 
 			<button onClick={clearFilters} className={style.Filters__button} data-testid="clear-filters-btn">
-				Borrar filtros
+				Clear filters
 			</button>
 		</div>
 	);
