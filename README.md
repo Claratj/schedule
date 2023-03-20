@@ -29,7 +29,7 @@ This project responds to a technical test of a few hours duration where two task
 
 - **Extra:**
   - Have the application running in a Docker container. ✔️
-  - Have the application [deployed](https://events-schedule-fdewfe4z1-claratj.vercel.app/) ✔️
+  - Have the application [deployed](https://events-schedule-oc6mqfkzd-claratj.vercel.app/) ✔️
 
 ## Backlog
 
