@@ -1,7 +1,7 @@
-import events from '../mock/apiEventsResponse';
-import eventsClient from './eventsClient';
+import lectures from '../mock/apiLecturesResponse';
+import lecturesClient from './lecturesClient';
 
-describe('eventsClient', () => {
+describe('lecturesClient', () => {
 	it('should return the correct results for filters params with one vocal', () => {
 		const filterParams = {
 			vocal: 'David Fernández García',
@@ -19,7 +19,7 @@ describe('eventsClient', () => {
 			},
 		];
 
-		expect(eventsClient.listEvents(filterParams)).resolves.toEqual(expectedResult);
+		expect(lecturesClient.listLectures(filterParams)).resolves.toEqual(expectedResult);
 	});
 
 	it('should return the correct results for input params with one theme', () => {
@@ -58,7 +58,7 @@ describe('eventsClient', () => {
 			},
 		];
 
-		expect(eventsClient.listEvents(filterParams)).resolves.toEqual(expectedResult);
+		expect(lecturesClient.listLectures(filterParams)).resolves.toEqual(expectedResult);
 	});
 
 	it('should return the correct results for input params with one vocal and one theme', () => {
@@ -78,7 +78,7 @@ describe('eventsClient', () => {
 				room: 1,
 			},
 		];
-		expect(eventsClient.listEvents(filterParams)).resolves.toEqual(expectedResult);
+		expect(lecturesClient.listLectures(filterParams)).resolves.toEqual(expectedResult);
 	});
 
 	it('should return all results if the filter params come empty', () => {
@@ -87,7 +87,7 @@ describe('eventsClient', () => {
 			theme: '',
 		};
 
-		expect(eventsClient.listEvents(filterParams)).resolves.toEqual(events);
+		expect(lecturesClient.listLectures(filterParams)).resolves.toEqual(lectures);
 	});
 
 	it('should return an empty array when none of the data match the filter params', () => {
@@ -96,6 +96,6 @@ describe('eventsClient', () => {
 			theme: 'theme',
 		};
 
-		expect(eventsClient.listEvents(filterParams)).resolves.toEqual([]);
+		expect(lecturesClient.listLectures(filterParams)).resolves.toEqual([]);
 	});
 });

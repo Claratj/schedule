@@ -1,6 +1,6 @@
-import IEvent from '../types/IEvent';
+import ILecture from '../types/ILecture';
 
-const events: IEvent[] = [
+const lectures: ILecture[] = [
 	{
 		id: 1,
 		title: 'Introducción',
@@ -57,4 +57,4 @@ const events: IEvent[] = [
 	},
 ];
 
-export default events;
+export default lectures;

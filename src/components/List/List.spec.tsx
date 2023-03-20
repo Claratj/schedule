@@ -19,7 +19,7 @@ describe('<List/>', () => {
 
 	it('should render the List component correctly', () => {
 		const props: IListProps = {
-			events: [
+			lectures: [
 				{
 					id: 1,
 					title: 'Event 1',
@@ -44,9 +44,9 @@ describe('<List/>', () => {
 
 		const { getByTestId } = render(<List {...props} />);
 
-		const list = getByTestId('events-list');
-		const listHeaders = getByTestId('events-list-headers');
-		const listBody = getByTestId('events-list-body');
+		const list = getByTestId('lectures-list');
+		const listHeaders = getByTestId('lectures-list-headers');
+		const listBody = getByTestId('lectures-list-body');
 
 		expect(list).toBeInTheDocument();
 		expect(listHeaders).toBeInTheDocument();

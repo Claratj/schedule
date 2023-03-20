@@ -1,8 +1,8 @@
 import classNames from 'classnames';
-import IEvent from '../../types/IEvent';
+import ILecture from '../../types/ILecture';
 import style from './Card.module.scss';
 
-export interface ICardProps extends IEvent {
+export interface ICardProps extends ILecture {
 	top: number;
 	height: number;
 	color: string;

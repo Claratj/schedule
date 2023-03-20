@@ -1,8 +1,8 @@
-import IEvent from '../../types/IEvent';
+import ILecture from '../../types/ILecture';
 
 export default function useList() {
-	let roomOne: IEvent[] = [];
-	let roomTwo: IEvent[] = [];
+	let roomOne: ILecture[] = [];
+	let roomTwo: ILecture[] = [];
 
 	function calculateDistanceFromTop(time: string): number {
 		switch (time) {
