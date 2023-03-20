@@ -1,6 +1,6 @@
-import eventsRepository from './events.repository';
+import lecturesRepository from './lectures.repository';
 
-describe('events.repository', () => {
+describe('lectures.repository', () => {
 	it('should return the correct data with the appropriate filters applied', async () => {
 		const filterParams = { theme: 'General' };
 		const expectedResult = [
@@ -15,7 +15,7 @@ describe('events.repository', () => {
 			},
 		];
 
-		const result = await eventsRepository.list(filterParams);
+		const result = await lecturesRepository.list(filterParams);
 
 		expect(result).toEqual(expectedResult);
 	});
@@ -34,7 +34,7 @@ describe('events.repository', () => {
 			},
 		];
 
-		const result = await eventsRepository.list(filterParams);
+		const result = await lecturesRepository.list(filterParams);
 
 		expect(result).not.toEqual(expectedResult);
 		expect(result).toStrictEqual([]);

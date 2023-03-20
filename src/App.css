@@ -1,19 +1,28 @@
 html,
 body,
-#root,
-.App {
+#root {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-}
-
-.App {
 	background-color: #edf6f9;
 	text-align: center;
 }
 
-.App-header {
+.App__header {
 	padding: 32px 0 8px;
+}
+
+.App__main {
+	width: 80%;
+	margin: 0 auto;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
 }
 
 @media only screen and(max-width: 500px) {
