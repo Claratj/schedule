@@ -1,4 +1,3 @@
-import classnames from 'classnames';
 import ILecture from '../../types/ILecture';
 import Card from '../Card/Card';
 import style from './List.module.scss';
@@ -37,7 +36,7 @@ export default function List(props: IListProps) {
 						</div>
 					))}
 				</div>
-				<div className={classnames(style.List__col, [`${style['List__col--rel']}`])}>
+				<div className={`${style.List__col} ${style['List__col--rel']}`}>
 					{roomOne.map((lecture) => (
 						<Card
 							key={lecture.id}
@@ -48,7 +47,7 @@ export default function List(props: IListProps) {
 						/>
 					))}
 				</div>
-				<div className={classnames(style.List__col, [`${style['List__col--rel']}`])}>
+				<div className={`${style.List__col} ${style['List__col--rel']}`}>
 					{roomTwo.map((lecture) => (
 						<Card
 							key={lecture.id}
