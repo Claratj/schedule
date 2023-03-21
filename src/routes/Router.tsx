@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from '../App';
 import EventPage from '../pages/EventPage/Event.page';
+import App from '../pages/HomePage/Home.page';
 import NotFoundPage from '../pages/NotFoundPage/NotFound.page';
 
 export default function Router() {

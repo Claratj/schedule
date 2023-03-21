@@ -8,11 +8,11 @@ body,
 	text-align: center;
 }
 
-.App__header {
+.Home__header {
 	padding: 32px 0 8px;
 }
 
-.App__main {
+.Home__main {
 	width: 80%;
 	margin: 0 auto;
 }
@@ -28,8 +28,7 @@ a {
 @media only screen and(max-width: 500px) {
 	html,
 	body,
-	#root,
-	.App {
+	#root {
 		overflow-x: hidden;
 	}
 }

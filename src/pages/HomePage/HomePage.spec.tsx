@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react';
-import App from './App';
-import testRender from './utils/testRender';
+import testRender from '../../utils/testRender';
+import HomePage from './Home.page';
 
-describe('<App/>', () => {
+describe('<HomePage/>', () => {
 	it('should display the title', () => {
-		testRender(App, {
+		testRender(HomePage, {
 			route: '/',
 			path: '/*',
 		});
